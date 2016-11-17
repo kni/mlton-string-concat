@@ -1,0 +1,13 @@
+local
+  $(SML_LIB)/basis/mlton.mlb
+  $(SML_LIB)/basis/basis.mlb
+in
+  local
+    (* $(SML_LIB)/basis/unsafe.mlb *)
+    $(SML_LIB)/basis/build/sources.mlb
+  in
+    mlton-string-concat.sml
+  end
+  bench-mlton.sml
+end
+
