@@ -1,11 +1,6 @@
-structure MltonStringConcat :
-sig
-  val ^          : (string * string)     -> string
-  val concat     : string list           -> string
-  val concatWith : string -> string list -> string
-end
-=
+structure MltonStringConcat =
 struct
+  open String
   local
     val bcopy = _import "bcopy_to_pos": Word8Array.array * int * string * int -> unit; (* dst, dst_pos, src, src_len *) 
   in
