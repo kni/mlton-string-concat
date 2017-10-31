@@ -1,5 +1,8 @@
 mlton-string-concat is concat with help FFI call memmove
 
+Deprecated after 2017-09-04 - https://github.com/MLton/mlton/pull/192
+https://sourceforge.net/p/mlton/mailman/mlton-user/thread/CAG%2BQnTcffmvXcpFv9rivvwdcsRXvUCorYVdEPmhjCE8EHEpOig%40mail.gmail.com/#msg35312358
+
 Benchmark
 
                                       MLton    MLton with memmove   PolyML   Perl 
