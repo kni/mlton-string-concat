@@ -12,7 +12,7 @@ struct
         if a_length = 0 then b else 
         if b_length = 0 then a else
         let
-          val arr = Word8Array.arrayUninit (a_length + b_length)
+          val arr = Unsafe.Word8Array.create (a_length + b_length)
         in
           bcopy(arr, 0, a, a_length);
           bcopy(arr, a_length, b, b_length);
@@ -31,7 +31,7 @@ struct
           in
             if cnt = 0 then "" else
             let
-              val arr = Word8Array.arrayUninit cnt
+              val arr = Unsafe.Word8Array.create cnt
             
               fun copy (_, []:string list) = ()
                 | copy (i, h::t) =
